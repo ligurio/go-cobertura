@@ -16,8 +16,8 @@ type Coverage struct {
 	BranchesCovered int      `xml:"branches-covered,attr,omitempty"`
 	BranchRate      float64  `xml:"branch-rate,attr,omitempty"`
 	Timestamp       int      `xml:"timstamp,attr,omitempty"`
-	Complexity      float64  `xml:complexity,attr,omitempty`
-	Version         int      `xml:version,attr,omitempty`
+	Complexity      float64  `xml:"complexity,attr,omitempty"`
+	Version         int      `xml:"version,attr,omitempty"`
 
 	Sources  []Source  `xml:"source->source"`
 	Packages []Package `xml:"package->package"`
@@ -33,16 +33,16 @@ type Package struct {
 	Name       string   `xml:"name,attr,omitempty"`
 	LineRate   float64  `xml:"line-rate,attr,omitempty"`
 	BranchRate float64  `xml:"branch-rate,attr,omitempty"`
-	Complexity float64  `xml:complexity,attr,omitempty`
+	Complexity float64  `xml:"complexity,attr,omitempty"`
 	Classes    []Class  `xml:"class->class"`
 }
 
 type Class struct {
 	XMLName    xml.Name `xml:"class"`
-	Name       string   `xml:"attr,name,omitempty"`
-	Filename   string   `xml:"attr,filename,omitempty"`
-	LineRate   float64  `xml:"attr,line-rate,omitempty"`
-	BranchRate float64  `xml:"attr,branch-rate,omitempty"`
+	Name       string   `xml:"name,attr,omitempty"`
+	Filename   string   `xml:"filename,attr,omitempty"`
+	LineRate   float64  `xml:"line-rate,attr,omitempty"`
+	BranchRate float64  `xml:"branch-rate,attr,omitempty"`
 	Complexity float64  `xml:"complexity,attr,omitempty"`
 	Methods    []Method `xml:"methods->method"`
 	Lines      []Line   `xml:"lines->line"`
