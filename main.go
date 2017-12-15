@@ -21,5 +21,9 @@ func main() {
 	defer file.Close()
 
 	report, err := cobertura.NewParser(file)
-	fmt.Printf("%+v\n", report)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Printf("%+v\n", report)
+	}
 }
