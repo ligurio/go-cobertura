@@ -17,7 +17,7 @@ type Coverage struct {
 	BranchRate      float64  `xml:"branch-rate,attr,omitempty"`
 	Timestamp       int      `xml:"timstamp,attr,omitempty"`
 	Complexity      float64  `xml:"complexity,attr,omitempty"`
-	Version         int      `xml:"version,attr,omitempty"`
+	Version         float64  `xml:"version,attr,omitempty"`
 
 	Sources  []Source  `xml:"source->source"`
 	Packages []Package `xml:"package->package"`
